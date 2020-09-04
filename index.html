@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>煮干しくん誕生日おめでとう！</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+#main {
+  text-align: center;
+}
+  </style>
+</head>
+<body>
+  <div id="main">
+    <h1>えー、本日は @nib_sh さんがTwitterに誕生して<span id="count"></span>回目の誕生日となります。</h1>
+    <p>-Forever niboshi-</p><p> 今日この日に立ち会えた幸運に感謝を。乾杯🍻</p> 
+    <a class="twitter-share-button"
+       id="tweet"
+       href="https://twitter.com/intent/tweet"
+       data-size="large"
+       data-text=""
+       data-url="https://rokicraft.com/niboshi_birthday/"
+       data-related="roamer7038,nib_sh">
+      祝う
+    </a>
+  </div>
+<script>
+  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+  const count = Math.ceil(((new Date(Date.now())) - (new Date(2013, 3-1, 9))) / (1000 * 60 * 60 *24))
+  document.getElementById("count").textContent = count
+  document.getElementById("tweet").setAttribute("data-text", `えー、本日は @nib_sh さんがTwitterに誕生して${count}回目の誕生日となります。-Forever niboshi- 今日この日に立ち会えた幸運に感謝を。乾杯🍻`)
+</script>
+</body>
+</html>
